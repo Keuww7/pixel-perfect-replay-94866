@@ -13,7 +13,10 @@ export function spNow(date: Date) {
   }).formatToParts(date);
   const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "0";
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return { day: days.indexOf(get("weekday")), hour: (Number(get("hour")) % 24) + Number(get("minute")) / 60 };
+  return {
+    day: days.indexOf(get("weekday")),
+    hour: (Number(get("hour")) % 24) + Number(get("minute")) / 60,
+  };
 }
 
 export function isOpenAt(date: Date, hours: Hours) {

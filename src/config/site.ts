@@ -28,11 +28,35 @@ export const site = {
   images: { hero, before, after },
   marquee: ["CORTE", "BARBA", "NAVALHA", "ESTILO"],
   services: [
-    { id: "corte", name: "Corte", desc: "Tesoura, máquina e acabamento na navalha", price: 40, image: svcCorte },
-    { id: "barba", name: "Barba", desc: "Toalha quente, óleo e navalha", price: 30, image: svcBarba },
+    {
+      id: "corte",
+      name: "Corte",
+      desc: "Tesoura, máquina e acabamento na navalha",
+      price: 40,
+      image: svcCorte,
+    },
+    {
+      id: "barba",
+      name: "Barba",
+      desc: "Toalha quente, óleo e navalha",
+      price: 30,
+      image: svcBarba,
+    },
     { id: "combo", name: "Corte e barba", desc: "O ritual completo", price: 60, image: after },
-    { id: "sobrancelha", name: "Sobrancelha", desc: "Alinhamento na navalha", price: 15, image: barber2 },
-    { id: "pigmentacao", name: "Pigmentação", desc: "Preenchimento natural de barba e cabelo", price: 35, image: barber1 },
+    {
+      id: "sobrancelha",
+      name: "Sobrancelha",
+      desc: "Alinhamento na navalha",
+      price: 15,
+      image: barber2,
+    },
+    {
+      id: "pigmentacao",
+      name: "Pigmentação",
+      desc: "Preenchimento natural de barba e cabelo",
+      price: 35,
+      image: barber1,
+    },
   ],
   team: [
     { id: "rafa", name: "Rafael Souza", role: "Degradê e barba desenhada", photo: barber1 },
@@ -52,9 +76,21 @@ export const site = {
   slotMinutes: 60,
   bookingDaysAhead: 10,
   testimonials: [
-    { name: "Lucas M.", text: "Melhor degradê da Zona Sul. Ambiente top, café na hora e pontualidade.", stars: 5 },
-    { name: "André P.", text: "A barba com toalha quente do Seu Zé é outro nível. Virei cliente fixo.", stars: 5 },
-    { name: "Bruno C.", text: "Agendei pelo WhatsApp em 1 minuto. Atendimento impecável.", stars: 5 },
+    {
+      name: "Lucas M.",
+      text: "Melhor degradê da Zona Sul. Ambiente top, café na hora e pontualidade.",
+      stars: 5,
+    },
+    {
+      name: "André P.",
+      text: "A barba com toalha quente do Seu Zé é outro nível. Virei cliente fixo.",
+      stars: 5,
+    },
+    {
+      name: "Bruno C.",
+      text: "Agendei pelo WhatsApp em 1 minuto. Atendimento impecável.",
+      stars: 5,
+    },
     { name: "Felipe R.", text: "Detalhe em tudo. Sai daqui me sentindo outro.", stars: 5 },
   ],
 };

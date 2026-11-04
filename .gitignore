@@ -15,6 +15,15 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
+*.tsbuildinfo
+
+# Build/test artifacts
+coverage
+
+# Variáveis de ambiente (nunca suba segredos)
+.env
+.env.*
+!.env.example
 
 # Wrangler / Cloudflare
 .wrangler/

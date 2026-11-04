@@ -1,5 +1,6 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "navalha21-barbearia",
+  "description": "Landing page para barbearia — protótipo rebrandável (React + TanStack Start + Tailwind).",
   "private": true,
   "sideEffects": false,
   "type": "module",

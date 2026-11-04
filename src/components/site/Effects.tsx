@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { motion, AnimatePresence, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+  useReducedMotion,
+} from "framer-motion";
 import Lenis from "lenis";
 import { site } from "@/config/site";
 
@@ -98,13 +104,25 @@ export function Cursor() {
       aria-hidden
       className="pointer-events-none fixed left-0 top-0 z-[90] rounded-full border border-primary mix-blend-difference"
       style={{ x: sx, y: sy, translateX: "-50%", translateY: "-50%" }}
-      animate={{ width: hover ? 64 : 18, height: hover ? 64 : 18, backgroundColor: hover ? "var(--color-primary)" : "transparent" }}
+      animate={{
+        width: hover ? 64 : 18,
+        height: hover ? 64 : 18,
+        backgroundColor: hover ? "var(--color-primary)" : "rgba(0, 0, 0, 0)",
+      }}
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
     />
   );
 }
 
-export function Reveal({ children, delay = 0, className }: { children: ReactNode; delay?: number; className?: string }) {
+export function Reveal({
+  children,
+  delay = 0,
+  className,
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}) {
   return (
     <motion.div
       className={className}
