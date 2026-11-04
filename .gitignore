@@ -20,6 +20,10 @@ dist-ssr
 # Build/test artifacts
 coverage
 
+# Lockfile: o projeto usa bun.lock (Lovable). Não versionar o do npm.
+package-lock.json
+yarn.lock
+
 # Variáveis de ambiente (nunca suba segredos)
 .env
 .env.*

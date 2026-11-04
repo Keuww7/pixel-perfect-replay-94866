@@ -41,27 +41,24 @@ bun run dev
 .
 ├── public/                  # arquivos servidos na raiz (favicon, robots.txt)
 ├── src/
-│   ├── assets/              # fotos do protótipo (hero, barbeiros, antes/depois)
-│   ├── components/
-│   │   ├── site/            # seções da landing page (uma por arquivo)
-│   │   │   ├── Nav.tsx          # menu fixo
-│   │   │   ├── Hero.tsx         # primeira dobra
-│   │   │   ├── Marquee.tsx      # faixa animada de palavras
-│   │   │   ├── Services.tsx     # serviços + preços (hover no desktop, acordeão no mobile)
-│   │   │   ├── BeforeAfter.tsx  # comparador antes/depois
-│   │   │   ├── Team.tsx         # equipe
-│   │   │   ├── Booking.tsx      # agendamento em 3 passos → WhatsApp
-│   │   │   ├── Testimonials.tsx # depoimentos
-│   │   │   ├── Contact.tsx      # horários, endereço, mapa
-│   │   │   ├── Footer.tsx
-│   │   │   ├── WhatsAppFab.tsx  # botão flutuante (mobile)
-│   │   │   ├── Effects.tsx      # cursor, preloader, smooth scroll, reveal, magnético
-│   │   │   ├── shared.tsx       # utilidades comuns (formatação, link do WhatsApp, botão)
-│   │   │   └── index.ts         # ponto único de importação das seções
-│   │   └── ui/              # componentes base do shadcn/ui (não precisam ser mexidos)
+│   ├── assets/              # fotos WebP do protótipo (hero, barbeiros, antes/depois)
+│   ├── components/site/     # seções da landing page (uma por arquivo)
+│   │   ├── Nav.tsx          # menu fixo
+│   │   ├── Hero.tsx         # primeira dobra
+│   │   ├── Marquee.tsx      # faixa animada de palavras
+│   │   ├── Services.tsx     # serviços + preços (hover no desktop, acordeão no mobile)
+│   │   ├── BeforeAfter.tsx  # comparador antes/depois
+│   │   ├── Team.tsx         # equipe
+│   │   ├── Booking.tsx      # agendamento em 3 passos → WhatsApp
+│   │   ├── Testimonials.tsx # depoimentos
+│   │   ├── Contact.tsx      # horários, endereço, mapa
+│   │   ├── Footer.tsx
+│   │   ├── WhatsAppFab.tsx  # botão flutuante (mobile)
+│   │   ├── Effects.tsx      # cursor, preloader, smooth scroll, reveal, magnético
+│   │   ├── shared.tsx       # utilidades comuns (formatação, link do WhatsApp, botão)
+│   │   └── index.ts         # ponto único de importação das seções
 │   ├── config/site.ts       # ⭐ TODOS os dados do cliente ficam aqui
-│   ├── hooks/               # hooks reutilizáveis
-│   ├── lib/                 # regras de horário, tratamento de erros, utils
+│   ├── lib/                 # regras de horário e tratamento de erros
 │   ├── routes/              # rotas (TanStack Start — roteamento por arquivo)
 │   ├── test/                # testes
 │   ├── styles.css           # tema, cores e fontes (Tailwind v4)
@@ -72,8 +69,13 @@ bun run dev
 │   ├── REBRANDING.md        # passo a passo para adaptar a outro cliente
 │   └── DEPLOY.md            # publicar na Vercel e conectar domínio
 ├── AGENTS.md                # instruções para o Lovable / agentes de código
+├── components.json          # config do shadcn/ui (permite adicionar componentes depois)
 └── package.json
 ```
+
+> O kit do shadcn/ui foi removido porque nenhum componente era usado. Se precisar de um
+> (formulário, modal, calendário), rode `npx shadcn@latest add <componente>` ou peça ao
+> Lovable — o `components.json` está configurado e ele recria o necessário.
 
 > **Regra de ouro:** todo conteúdo que muda de cliente para cliente vive em `src/config/site.ts`.
 > Nenhum texto de cliente deve ficar escrito dentro dos componentes.

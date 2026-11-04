@@ -37,7 +37,7 @@ services: [{ id: "corte", name: "Corte", desc: "Tesoura e máquina", price: 40, 
 ```
 
 - `id`: identificador único, sem espaços ou acentos.
-- `image`: importado no topo do arquivo (`import svcCorte from "@/assets/svc-corte.jpg"`).
+- `image`: importado no topo do arquivo (`import svcCorte from "@/assets/svc-corte.webp"`).
 
 ### Equipe
 
@@ -57,16 +57,16 @@ team: [{ id: "rafa", name: "Rafael Souza", role: "Degradê e barba", photo: barb
 
 Substitua os arquivos mantendo **os mesmos nomes** (aí não precisa mexer em import nenhum):
 
-| Arquivo                                        | Onde aparece            | Proporção recomendada            |
-| ---------------------------------------------- | ----------------------- | -------------------------------- |
-| `hero.jpg`                                     | fundo da primeira dobra | 16:9 horizontal, 1920×1080       |
-| `barber-1.jpg`, `barber-2.jpg`, `barber-3.jpg` | equipe                  | 3:4 vertical, 768×1024           |
-| `before.jpg` / `after.jpg`                     | comparador antes/depois | 4:3 ou 16:8, mesmo enquadramento |
-| `svc-corte.jpg`, `svc-barba.jpg`               | serviços                | 4:5 vertical                     |
+| Arquivo                                           | Onde aparece            | Proporção recomendada            |
+| ------------------------------------------------- | ----------------------- | -------------------------------- |
+| `hero.webp`                                       | fundo da primeira dobra | 16:9 horizontal, 1920×1080       |
+| `barber-1.webp`, `barber-2.webp`, `barber-3.webp` | equipe                  | 3:4 vertical, 768×1024           |
+| `before.webp` / `after.webp`                      | comparador antes/depois | 4:3 ou 16:8, mesmo enquadramento |
+| `svc-corte.webp`, `svc-barba.webp`                | serviços                | 4:5 vertical                     |
 
 Dicas:
 
-- Comprima em [squoosh.app](https://squoosh.app) (JPG, qualidade ~80). Fotos de 300 KB carregam rápido; de 3 MB não.
+- Comprima em [squoosh.app](https://squoosh.app) (WebP, qualidade ~82). Fotos de 60-100 KB carregam rápido; de 3 MB não.
 - Use fotos **do próprio cliente**. Banco de imagens genérico derruba a percepção de valor na hora da venda.
 - Se não tiver foto "antes/depois", peça duas ao cliente ou remova a seção `BeforeAfter` de `src/routes/index.tsx`.
 

@@ -5,14 +5,14 @@
  *  ou troque os imports abaixo pelas fotos reais do cliente.
  * ============================================================
  */
-import hero from "@/assets/hero.jpg"; // TROCAR: foto do ambiente
-import barber1 from "@/assets/barber-1.jpg"; // TROCAR: foto do barbeiro 1
-import barber2 from "@/assets/barber-2.jpg"; // TROCAR: foto do barbeiro 2
-import barber3 from "@/assets/barber-3.jpg"; // TROCAR: foto do barbeiro 3
-import before from "@/assets/before.jpg"; // TROCAR: foto "antes"
-import after from "@/assets/after.jpg"; // TROCAR: foto "depois"
-import svcCorte from "@/assets/svc-corte.jpg";
-import svcBarba from "@/assets/svc-barba.jpg";
+import hero from "@/assets/hero.webp"; // TROCAR: foto do ambiente
+import barber1 from "@/assets/barber-1.webp"; // TROCAR: foto do barbeiro 1
+import barber2 from "@/assets/barber-2.webp"; // TROCAR: foto do barbeiro 2
+import barber3 from "@/assets/barber-3.webp"; // TROCAR: foto do barbeiro 3
+import before from "@/assets/before.webp"; // TROCAR: foto "antes"
+import after from "@/assets/after.webp"; // TROCAR: foto "depois"
+import svcCorte from "@/assets/svc-corte.webp";
+import svcBarba from "@/assets/svc-barba.webp";
 
 export const site = {
   name: "Navalha 21",
