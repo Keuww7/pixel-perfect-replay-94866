@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- All client-specific data (name, prices, hours, team, contacts, photos) lives in src/config/site.ts so the demo can be rebranded per barbershop in one place.
