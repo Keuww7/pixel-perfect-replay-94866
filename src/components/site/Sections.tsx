@@ -115,7 +115,7 @@ export function Hero() {
         <div className="relative h-10 w-px overflow-hidden bg-foreground/20">
           <motion.div
             className="absolute inset-x-0 top-0 h-4 bg-primary"
-            animate={reduce ? undefined : { y: [-16, 40] }}
+            animate={reduce ? {} : { y: [-16, 40] }}
             transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
           />
         </div>
