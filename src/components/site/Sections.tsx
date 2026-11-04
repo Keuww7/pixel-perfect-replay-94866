@@ -29,7 +29,7 @@ export function Nav() {
       </button>
       <nav className="hidden gap-10 text-xs uppercase tracking-[0.25em] md:flex">
         {links.map(([id, label]) => (
-          <button key={id} onClick={() => scrollToId(id)} className="text-foreground/80 transition-colors hover:text-primary">
+          <button key={id} onClick={() => scrollToId(id!)} className="text-foreground/80 transition-colors hover:text-primary">
             {label}
           </button>
         ))}
@@ -381,7 +381,7 @@ export function Booking({
     const now = new Date();
     for (let i = 0; i < 21 && out.length < site.bookingDaysAhead; i++) {
       const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i);
-      if (site.hours[d.getDay()].open !== null) out.push(d);
+      if (site.hours[d.getDay()]?.open !== null) out.push(d);
     }
     return out;
   }, []);
@@ -537,7 +537,7 @@ export function Testimonials() {
     const t = setInterval(() => setI((v) => (v + 1) % list.length), 5000);
     return () => clearInterval(t);
   }, [list.length, reduce]);
-  const t = list[i];
+  const t = list[i]!;
   return (
     <section className="border-y border-border px-6 py-32 text-center md:px-12 md:py-48" aria-roledescription="carrossel">
       <Eyebrow>05 — Clientes</Eyebrow>
@@ -598,7 +598,7 @@ export function Contact() {
           )}
           <dl className="mb-10">
             {order.map((d) => {
-              const h = site.hours[d];
+              const h = site.hours[d]!;
               return (
                 <div key={d} className={`flex justify-between border-b border-border py-3 ${today === d ? "text-primary" : ""}`}>
                   <dt>{h.day}</dt>
